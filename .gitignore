@@ -25,3 +25,10 @@ Desktop.ini
 .DS_Store*
 ehthumbs.db
 Icon?
+
+#custom
+css
+doc
+img
+index.min.html
+js/app.min.js

@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit
+}
+
+html{
+  font-size: 62.5%;  //1rem = 10px;    10px/16px = 62.5%
+
+  @include respond(laptop){
+    font-size: 56.25%;  //1rem = 9px;    9px/16px = 56.25%
+  }
+  @include respond(tablet){
+    font-size: 50%;  //1rem = 8px;    8px/16px = 50%
+  }
+}
+
+body {
+  font-family: $font-regular;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+img, picture {
+  width: 100%;
+}

@@ -1,0 +1,30 @@
+/*
+>1200       normal
+900-1200,   laptop
+600-900,    tablet
+<600        phone
+
+1em = 16px
+div{
+  @include respond(laptop){
+    
+  }
+  @include respond(tablet){
+    
+  }
+  @include respond(phone){
+    
+  }
+}
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == laptop {
+    @media (max-width: 75em) { @content }; //1200px / 16
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 56.25em) { @content }; //900px / 16
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content };  //600px / 16
+  }
+}
